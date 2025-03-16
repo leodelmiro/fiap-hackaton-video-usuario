@@ -2,18 +2,18 @@ spring:
   cloud:
     aws:
       credentials:
-        access-key: ${AWS_ACCESS_KEY:ASIAX7PVKZLE4ZCS5YK3}
-        secret-key: ${AWS_SECRET_KEY:HvTpw445qwqnS+tBh3+uJyXt75RO4fEr6Ef3DwYo}
-        session: ${AWS_SESSION_TOKEN:IQoJb3JpZ2luX2VjENv//////////wEaCXVzLXdlc3QtMiJHMEUCIF3O6+q7X+H8GOVI/4Uc/L4ic8L7H7d+58An+V+UiT4UAiEA1p0YaI9MkKh5c+I3fVn8jDNQRY02K01UMyJTKkSIWdQqsAIINBABGgw1NDg2NTk3MTA2NjUiDFZPbcVjxAmpXlI2NCqNAsBQXmi3v1hN3ev2p1CSqgb5CFtgbSVK9xRtSo2i874xZgUD0msiv7gCZ8Rgj6mWtfy1pTqgrpffqRTrBpldbqHsKL6aOV2ja5aHiG/24ehCmSMHTyrOgl+ye2VjVb9fMKll24Ac9T7pqtAuwNGRNLntQTXoXeWm7xLKwe8sWxylYLYSyVAD81m9T9/Rf1sHMWgTKjB80vchgvqHVRYyRXuESI1hcQSjPXYvXmOK8pJfQssZ6GFWaeEPBLtSqhvdEGur3KqDEeiz/+yX1E9ex101E/IufkjYiCRiiRoHOXXDjLKI1jUXnKWv2sH5k0xcLb/moRrK5C1yBGuaaTrcw6+C0AqDb3qoadyt4VFSMOi93L4GOp0B7KXFNH0Ap0JOe4yXtysaf/KM+M74o9/TxhvO3isJQWTt7j901lU6tr4Y7wlWQolIJpJ7DbEpsf1ggCbLh99pLNxJby0GI2cfqvzzcIwmyDvXPAYQmnA4E5tmQn4jtl6P4vVcjKjjE7uOP1xTuzAz6k/9NG1/TucrRy81OzNlhe6HsWO2808NHdF+CnF0nNM72dev1jSjOkDU+QyxmA==}
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+        session: ${AWS_SESSION_TOKEN}
       region:
         static: ${AWS_REGION:us-east-1}
 
 amazon:
   cognito:
     url: ${COGNITO_URL:https://cognito-idp.us-east-1.amazonaws.com}
-    user-pool-id: ${COGNITO_USER_POOL_ID:us-east-1_2vFO7Zqqt}
-    client-id: ${COGNITO_CLIENT_ID:619p4cjkcjpidf1gm4kh7mrjpa}
-    client-secret: ${COGNITO_CLIENT_SECRET:vsdatcgjhkcd8oqmmtdku299hd27n3fvcmmn20pov8g8eov09lb}
+    user-pool-id: ${COGNITO_USER_POOL_ID}
+    client-id: ${COGNITO_CLIENT_ID}
+    client-secret: ${COGNITO_CLIENT_SECRET}
 
 management:
   endpoints:
