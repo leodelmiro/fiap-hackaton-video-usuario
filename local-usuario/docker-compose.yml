@@ -1,0 +1,30 @@
+services:
+  localstack-usuario:
+    container_name: "${LOCALSTACK_DOCKER_NAME:-localstack-usuario}"
+    image: localstack/localstack
+    ports:
+      - "4566:4566"            # LocalStack Gateway
+      - "4510-4559:4510-4559"  # external services port range
+    environment:
+      # LocalStack configuration: https://docs.localstack.cloud/references/configuration/
+      - DEBUG=${DEBUG:-0}
+      - SERVICES=cognito
+    volumes:
+      - "${LOCALSTACK_VOLUME_DIR:-./volume}:/var/lib/localstack"
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./init-aws:/etc/localstack/init/ready.d"
+
+  app-usuario:
+    build:
+      context: ..
+      dockerfile: ./Dockerfile
+    container_name: spring-boot-app-usuario
+    ports:
+      - "8080:8080"
+    depends_on:
+      - localstack-usuario
+    networks:
+      - backend
+
+networks:
+  backend:
