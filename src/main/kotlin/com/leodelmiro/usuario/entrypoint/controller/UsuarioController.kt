@@ -15,7 +15,7 @@ object UsuarioController {
     ): CriaUsuarioResponse = criaUsuarioRequest.toUsuario().let {
         criaUsuarioUseCase.executar(it)
     }.let {
-        CriaUsuarioResponse(it.id ?: "", it.usuario, it.senha, it.usuario)
+        CriaUsuarioResponse(it.id ?: "", it.usuario, it.senha, it.email)
     }
 
     fun entrar(
