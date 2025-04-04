@@ -1,6 +1,5 @@
 package com.leodelmiro.usuario.dataprovider
 
-import com.leodelmiro.usuario.dataprovider.utils.CognitoUtils
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
