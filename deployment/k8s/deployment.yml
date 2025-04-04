@@ -32,21 +32,26 @@ spec:
               cpu: "512m"
               memory: "2048M"
           env:
-            - name: S3_URL
+            - name: COGNITO_URL
               valueFrom:
                 configMapKeyRef:
                   name: usuario-configmap
-                  key: s3_url
-            - name: SNS_URL
+                  key: cognito_url
+            - name: COGNITO_CLIENT_ID
               valueFrom:
                 configMapKeyRef:
                   name: usuario-configmap
-                  key: sns_url
-            - name: SNS_ARN
+                  key: cognito_client_id
+            - name: COGNITO_CLIENT_SECRET
               valueFrom:
                 configMapKeyRef:
                   name: usuario-configmap
-                  key: novo_video_recebido_sns
+                  key: cognito_client-secret
+            - name: COGNITO_USER_POOL_ID
+              valueFrom:
+                configMapKeyRef:
+                  name: usuario-configmap
+                  key: cognito_user_pool_id
             - name: AWS_SECRET_KEY
               valueFrom:
                 configMapKeyRef:
@@ -62,11 +67,6 @@ spec:
                 configMapKeyRef:
                   name: usuario-configmap
                   key: aws_access_key
-            - name: ENVIOS_URL
-              valueFrom:
-                configMapKeyRef:
-                  name: usuario-configmap
-                  key: envios_url
           ports:
             - name: http-port
               containerPort: 8080
