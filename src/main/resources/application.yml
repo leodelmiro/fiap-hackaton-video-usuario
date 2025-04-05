@@ -1,0 +1,30 @@
+spring:
+  cloud:
+    aws:
+      credentials:
+        access-key: ${AWS_ACCESS_KEY}
+        secret-key: ${AWS_SECRET_KEY}
+        session: ${AWS_SESSION_TOKEN}
+      region:
+        static: ${AWS_REGION:us-east-1}
+
+amazon:
+  cognito:
+    url: ${COGNITO_URL:https://cognito-idp.us-east-1.amazonaws.com}
+    user-pool-id: ${COGNITO_USER_POOL_ID}
+    client-id: ${COGNITO_CLIENT_ID}
+    client-secret: ${COGNITO_CLIENT_SECRET}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, metrics
+  health:
+    livenessstate:
+      enabled: true
+    readinessstate:
+      enabled: true
+  server:
+    servlet:
+      context-path: /actuator
