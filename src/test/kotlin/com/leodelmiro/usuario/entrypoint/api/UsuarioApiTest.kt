@@ -67,7 +67,7 @@ class UsuarioApiTest {
     @Test
     fun `deve autenticar usuario com sucesso`() {
         val entrarUsuarioRequest = EntrarUsuarioRequest("usuario", "senha")
-        val token = Token("accessToken", "Bearer", 3600)
+        val token = Token("accessToken", "idToken", "Bearer", 3600)
         `when`(entrarUsuarioUseCase.executar("usuario", "senha")).thenReturn(token)
 
         val response: ResponseEntity<TokenResponse> = usuarioApi.entrar(entrarUsuarioRequest)

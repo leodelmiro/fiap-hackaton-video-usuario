@@ -7,8 +7,8 @@ import com.leodelmiro.usuario.entrypoint.api.request.CriaUsuarioRequest
 import com.leodelmiro.usuario.entrypoint.api.request.EntrarUsuarioRequest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
-import org.mockito.ArgumentMatchers.any
-import org.mockito.Mockito.*
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.`when`
 import utils.criaUsuario
 
 class UsuarioControllerTest {
@@ -33,7 +33,7 @@ class UsuarioControllerTest {
     fun `deve autenticar usuario com sucesso`() {
         val entrarUsuarioRequest = EntrarUsuarioRequest("usuario", "senha")
         val entrarUsuarioUseCase = mock(EntrarUsuarioUseCase::class.java)
-        val tokenResponse = Token("accessToken", "Bearer", 3600)
+        val tokenResponse = Token("accessToken", "idToken", "Bearer", 3600)
 
         `when`(entrarUsuarioUseCase.executar("usuario", "senha")).thenReturn(tokenResponse)
 
