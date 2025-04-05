@@ -16,7 +16,7 @@ class EntrarUsuarioUseCaseImplTest {
     fun `deve retornar um token quando executar for chamado`() {
         val usuario = "usuario123"
         val senha = "senha123"
-        val tokenEsperado = Token(accessToken = "token123", expiresIn = 300)
+        val tokenEsperado = Token(accessToken = "token123", idToken = "token123", expiresIn = 300)
         `when`(entrarUsuarioGateway.executar(usuario, senha)).thenReturn(tokenEsperado)
 
         val resultado = entrarUsuarioUseCase.executar(usuario, senha)

@@ -26,6 +26,7 @@ class EntrarUsuarioGatewayImplTest {
 
         val authenticationResult = AuthenticationResultType.builder()
             .accessToken("test-access-token")
+            .idToken("test-id-token")
             .tokenType("Bearer")
             .expiresIn(3600)
             .build()
@@ -39,6 +40,7 @@ class EntrarUsuarioGatewayImplTest {
         val token = entrarUsuarioGateway.executar(usuario, senha)
 
         assertEquals("test-access-token", token.accessToken)
+        assertEquals("test-id-token", token.idToken)
         assertEquals("Bearer", token.tokenType)
         assertEquals(3600, token.expiresIn)
     }

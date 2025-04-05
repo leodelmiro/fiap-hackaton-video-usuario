@@ -39,6 +39,7 @@ class EntrarUsuarioGatewayImpl(
 
         return Token(
             authenticationResult.accessToken(),
+            authenticationResult.idToken(),
             authenticationResult.tokenType(),
             authenticationResult.expiresIn()
         )

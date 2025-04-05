@@ -22,6 +22,6 @@ object UsuarioController {
         entrarUsuarioRequest: EntrarUsuarioRequest,
         entrarUsuarioUseCase: EntrarUsuarioUseCase
     ) = entrarUsuarioUseCase.executar(entrarUsuarioRequest.usuario, entrarUsuarioRequest.senha).let {
-        TokenResponse(it.accessToken, it.tokenType, it.expiresIn)
+        TokenResponse(it.accessToken, it.idToken, it.tokenType, it.expiresIn)
     }
 }
