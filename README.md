@@ -15,7 +15,7 @@
 Aplicação se trata de um Projeto Fiap Tech Challenge (Hackathon) - Software Architecture, simulando um projeto de uma
 empresa que recebe videos e transforma em Imagens.
 
-Este repositório é referente ao microserviço responsável pelo gerenciamento de usuário.
+Este repositório é referente ao microserviço responsável pelo gerenciamento de usuário via cognito.
 
 ### Demais repositórios
 - https://github.com/leodelmiro/fiap-hackaton-video-recebe
