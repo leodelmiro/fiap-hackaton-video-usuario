@@ -32,7 +32,6 @@ Este repositório é referente ao microserviço responsável pelo gerenciamento 
 - Spring
 - Cognito
 - Swagger
-- Postgres
 - Docker
 - Docker Compose
 - AWS
