@@ -34,7 +34,7 @@ Este repositório é referente ao microserviço responsável pelo gerenciamento 
 - Swagger
 - Docker
 - Docker Compose
-- AWS
+- AWS EKS
 - Kubernetes
 
 ## Estrutura do Projeto
