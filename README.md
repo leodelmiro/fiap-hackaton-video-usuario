@@ -112,5 +112,5 @@ url http://localhost:8080/swagger-ui/index.html
 será necessário o Insomnia instalado.**
 
 ## Sonar Coverage
-![Sonar coverage](sonar-coverage.png)
+![Sonar Coverage](https://github.com/user-attachments/assets/8bb6b53a-4b91-4791-b336-7efad084db37)
 https://sonarcloud.io/summary/overall?id=leodelmiro_fiap-hackaton-video-usuario&branch=main
